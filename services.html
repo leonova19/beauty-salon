@@ -373,27 +373,19 @@
   <div id="services-list"></div>
 
   <script>
-    const spaceId = "xdqozg637gjf"; // твой Space ID
-    const accessToken = "lUSbu1r-9VW7NsDMEYksBe98ZJ-iiFWmTP8_IRdsz78"; // твой API ключ
-
     async function getServices() {
-      const res = await fetch(
-        `https://cdn.contentful.com/spaces/${spaceId}/environments/master/entries?access_token=${accessToken}&content_type=service`
-      );
+      const res = await fetch("/api/services");
       const data = await res.json();
-      console.log("Contentful response:", data); // 👀 сможешь видеть весь ответ в консоли
-
-      const assets = data.includes?.Asset || []; // если нет картинок → пустой массив
 
       const services = data.items.map(item => {
-        const imageId = item.fields.image?.sys?.id;
-        const image = assets.find(asset => asset.sys.id === imageId);
+        const imageId = item.fields.image?.sys.id;
+        const image = data.includes?.Asset?.find(asset => asset.sys.id === imageId);
         return {
-          title: item.fields.title || "Untitled",
-          description: item.fields.description || "",
-          price: item.fields.price || "",
-          details: item.fields.details || "",
-          image: image ? image.fields.file.url : "images/placeholder.jpg"
+          title: item.fields.title,
+          description: item.fields.description,
+          price: item.fields.price,
+          details: item.fields.details,
+          image: image ? image.fields.file.url : ""
         };
       });
 
