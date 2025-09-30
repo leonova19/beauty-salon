@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Studio | Beauty Salon</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Borel&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <header>
+        <div class="logo">
+            <a href="index.html">Glow Studio</a>
+        </div>
+
+        <!-- Кнопка бургер -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html">Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav");
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Glow Studio</h1>
+            <p>Where beauty meets relaxation</p>
+            <a href="book.html" class="btn">BOOK</a>
+        </div>
+    </section>
+
+    <section class="about-salon">
+        <div class="about-row">
+            <div class="about-image">
+                <img src="images/salon1.png" alt="Beauty Salon Interior">
+            </div>
+            <div class="about-text">
+                <h2>Our Salon</h2>
+                <p>
+                    Glow Studio is a modern beauty salon located in the heart of Tallinn.
+                    We specialize in high-quality beauty treatments, offering our clients
+                    a warm and relaxing atmosphere. From manicures and facials to hair
+                    styling and massages, our team is here to make you feel beautiful,
+                    confident, and cared for.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-row reverse">
+            <div class="about-image">
+                <img src="images/salon2.png" alt="Beauty Salon Treatment Room">
+            </div>
+            <div class="about-text">
+                <h2>Why Choose Us</h2>
+                <p>
+                    At Glow Studio, we pay attention to every detail to make your visits truly special.
+                    Our team consists of experienced professionals who work with passion and expertise.
+                    We tailor treatments individually for each client, create a cozy atmosphere, and use only modern
+                    techniques and high-quality materials.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Glow Studio. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

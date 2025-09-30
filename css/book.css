@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #4a2c2a;
+  line-height: 1.6;
+  background-color: #f9f6f2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background: #fdfaf7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo a {
+  font-family: "Borel", cursive;
+  text-decoration: none;
+  color: #6b4226;
+  font-size: 1.9rem;
+  font-weight: bold;
+  line-height: 0.1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-family: "Zain", sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #6b4226;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #a67856;
+}
+
+.booking-content h1 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 3px 6px #3c2f2f;
+}
+
+.booking-content p {
+  font-family: "Zain", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #f9f6f2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.booking-content {
+  background: #a67856d4;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.elfsight-app-9c9db4ca-2b67-4e8b-a23d-ce97b848743a {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+footer {
+  font-family: "Zain", sans-serif;
+  background: #3c2f2f;
+  color: #f3e9dd;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+/* --- Burger Menu --- */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6b4226;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Скрываем меню по умолчанию */
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fdfaf7;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+  }
+
+  /* Когда активное */
+  nav.active {
+    display: flex;
+    animation: dropdown 0.3s ease forwards;
+  }
+
+  /* Стили списка */
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 1.4rem;
+    display: block;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block; /* бургер показывается */
+  }
+}
+
+/* Анимация выпадающего меню */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

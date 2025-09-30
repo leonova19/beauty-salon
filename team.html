@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team - Glow Studio</title>
+  <link rel="stylesheet" href="css/team.css">
+</head>
+
+<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Borel&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <header>
+    <div class="logo">
+      <a href="index.html">Glow Studio</a>
+    </div>
+
+    <!-- Кнопка бургер -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html" class="btn">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+
+  <section class="ourteam">
+    <div class="ourteam-content">
+      <h1>Our Team</h1>
+      <p>Meet the professionals behind Glow Studio. Our talented team of experts is here to provide you with the best
+        beauty treatments in a warm and welcoming atmosphere.</p>
+    </div>
+  </section>
+
+
+  <section class="team">
+    <div class="team-member">
+      <img src="images/nailartist.png" alt="Anna - Nail Artist">
+      <h2>Anna</h2>
+      <p class="role">Nail Artist</p>
+      <p>Specialist in manicures, pedicures, and creative nail art with over 5 years of experience.</p>
+    </div>
+
+    <div class="team-member">
+      <img src="images/hairstylist.png" alt="Maria - Hair Stylist">
+      <h2>Maria</h2>
+      <p class="role">Hair Stylist</p>
+      <p>Expert in modern cuts, coloring, and styling, helping clients look their best every day.</p>
+    </div>
+
+    <div class="team-member">
+      <img src="images/beautician.png" alt="Elena - Beautician">
+      <h2>Elena</h2>
+      <p class="role">Beautician</p>
+      <p>Provides skincare treatments, facials, and wellness care with a gentle touch.</p>
+    </div>
+
+    <div class="team-member">
+      <img src="images/massagetherapist.png" alt="Sofia - Massage Therapist">
+      <h2>Sofia</h2>
+      <p class="role">Massage Therapist</p>
+      <p>Specialist in relaxation and therapeutic massage, bringing harmony to body and mind.</p>
+    </div>
+  </section>
+
+
+
+
+
+  <footer>
+    <p>© 2025 Glow Studio. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

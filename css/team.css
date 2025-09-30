@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #4a2c2a;
+  line-height: 1.6;
+  background-color: #f9f6f2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px; 
+  background: #fdfaf7;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo a {
+  font-family: 'Borel', cursive;
+  text-decoration: none;
+  color: #6b4226; 
+  font-size: 1.9rem;
+  font-weight: bold;
+  line-height: 0.1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-family: "Zain", sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #6b4226;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #a67856; 
+}
+
+.ourteam {
+  background: #a67856d4;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.ourteam-content h1 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 3px 6px #3c2f2f;
+}
+
+.ourteam-content p {
+  font-family: "Zain", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #f9f6f2;
+  text-shadow: 0 2px 9px #3c2f2f;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.team-member {
+  background: #a678564f;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.team-member img {
+  width: 100%;
+  height: 600px; 
+  object-fit: cover; 
+  border-radius: 12px; 
+  margin-bottom: 20px;
+}
+
+.team-member h2 {
+  font-size: 1.6rem;
+  color: #6b4226;
+  margin-bottom: 5px;
+}
+
+.team-member .role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #a67856;
+  margin-bottom: 15px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #5c4033;
+  line-height: 1.5;
+}
+
+
+
+footer {
+  font-family: "Zain", sans-serif;
+  background: #3c2f2f; 
+  color: #f3e9dd; 
+  text-align: center;
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+/* --- Burger Menu --- */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6b4226;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Скрываем меню по умолчанию */
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fdfaf7;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+  }
+
+  /* Когда активное */
+  nav.active {
+    display: flex;
+    animation: dropdown 0.3s ease forwards;
+  }
+
+  /* Стили списка */
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 1.4rem;
+    display: block;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block; /* бургер показывается */
+  }
+}
+
+/* Анимация выпадающего меню */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-member img {
+  width: 100%;
+  height: auto; /* убираем фиксированную высоту */
+  max-height: 450px; /* ограничиваем, но не растягиваем */
+  object-fit: contain; /* сохраняем всё фото полностью */
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: #fff; /* чтобы пустое место выглядело аккуратно */
+}
+
+@media (max-width: 768px) {
+  .team {
+    grid-template-columns: 1fr; /* один мастер в ряд */
+    gap: 40px; /* меньше отступов */
+  }
+
+  .team-member {
+    padding: 15px;
+  }
+
+  .team-member img {
+    max-height: 300px; /* поменьше фото на телефоне */
+  }
+
+  .team-member h2 {
+    font-size: 1.4rem;
+  }
+
+  .team-member p {
+    font-size: 0.95rem;
+  }
+}

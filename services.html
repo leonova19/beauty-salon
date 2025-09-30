@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Studio | Beauty Salon</title>
+  <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Borel&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+  <header>
+    <div class="logo">
+      <a href="index.html">Glow Studio</a>
+    </div>
+
+    <!-- Кнопка бургер -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html" class="btn">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+
+  <section class="services-intro">
+    <div class="services-content">
+      <h1>Services</h1>
+      <p>Choose from a wide range of professional treatments offered by our team of experts.</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="service-category">
+      <h2>Nails</h2>
+      <div class="procedures">
+        <div class="procedure">
+          <img src="images/nails1.jpg" alt="Manicure with Extensions">
+          <div class="procedure-info">
+            <h3>Manicure with Extensions</h3>
+            <p>Durable and elegant nail extensions.</p>
+            <span class="price">€35</span>
+            <button class="open-modal" data-modal="modal1">More details</button>
+          </div>
+        </div>
+
+        <div class="procedure">
+          <img src="images/nails2.jpg" alt="Nail Correction">
+          <div class="procedure-info">
+            <h3>Nail Correction</h3>
+            <p>Correction of nail shape and structure.</p>
+            <span class="price">€25</span>
+            <button class="open-modal" data-modal="modal2">More details</button>
+          </div>
+        </div>
+
+        <div class="procedure">
+          <img src="images/nails3.jpg" alt="Pedicure">
+          <div class="procedure-info">
+            <h3>Pedicure</h3>
+            <p>Full pedicure treatment with care.</p>
+            <span class="price">€30</span>
+            <button class="open-modal" data-modal="modal3">More details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals for Nails -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Manicure with Extensions</h2>
+        <p><strong>For whom:</strong> Ideal for clients who want long, strong, and stylish nails that last several
+          weeks.</p>
+        <p><strong>What we do:</strong> We carefully prepare your natural nails, apply nail extensions using gel or
+          acrylic, and shape them according to your preference. Finishing includes polishing and optional nail art.</p>
+        <p><strong>Effect:</strong> Elegant, durable nails that enhance the beauty of your hands and require minimal
+          upkeep.</p>
+        <p><strong>Duration:</strong> About 2 hours.</p>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Nail Correction</h2>
+        <p><strong>For whom:</strong> Perfect for those with damaged, grown-out, or uneven nails.</p>
+        <p><strong>What we do:</strong> We restore the structure of the nail, correct asymmetry, and strengthen the
+          surface with gel or acrylic. If needed, we adjust length and shape.</p>
+        <p><strong>Effect:</strong> Natural-looking, neat, and strong nails ready for everyday wear.</p>
+        <p><strong>Duration:</strong> 1.5–2 hours.</p>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Pedicure</h2>
+        <p><strong>For whom:</strong> Anyone who wants their feet to look and feel healthy and well cared for.</p>
+        <p><strong>What we do:</strong> The procedure includes nail shaping, cuticle care, exfoliation of rough skin,
+          hydration, and a relaxing massage. Polish or gel finish can be added.</p>
+        <p><strong>Effect:</strong> Smooth, soft skin and neat nails that look beautiful in any shoes.</p>
+        <p><strong>Duration:</strong> 1.5 hours.</p>
+      </div>
+    </div>
+
+    <!-- Hair -->
+    <div class="service-category">
+      <h2>Hair</h2>
+      <div class="procedures">
+        <div class="procedure">
+          <img src="images/hair1.png" alt="Haircut & Styling">
+          <div class="procedure-info">
+            <h3>Haircut & Styling</h3>
+            <p>Modern cuts and styling tailored to you.</p>
+            <span class="price">€40</span>
+            <button class="open-modal" data-modal="modal4">More details</button>
+          </div>
+        </div>
+
+        <div class="procedure">
+          <img src="images/hair2.png" alt="Hair Coloring">
+          <div class="procedure-info">
+            <h3>Hair Coloring</h3>
+            <p>Professional coloring.</p>
+            <span class="price">€55</span>
+            <button class="open-modal" data-modal="modal5">More details</button>
+          </div>
+        </div>
+        <div class="procedure">
+          <img src="images/hair3.png" alt="Hair Treatment">
+          <div class="procedure-info">
+            <h3>Hair Treatment</h3>
+            <p>Nourishing treatment for shiny, healthy hair.</p>
+            <span class="price">€35</span>
+            <button class="open-modal" data-modal="modal6">More details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Haircut & Styling</h2>
+        <p><strong>For whom:</strong> Anyone who wants a modern, personalized look with professional finishing.</p>
+        <p><strong>What we do:</strong> We select the best haircut for your face shape and lifestyle, then style your
+          hair with professional tools and products.</p>
+        <p><strong>Effect:</strong> A refreshed look, healthy hair ends, and a style that enhances your features.</p>
+        <p><strong>Duration:</strong> 1–1.5 hours.</p>
+      </div>
+    </div>
+
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Hair Coloring</h2>
+        <p><strong>For whom:</strong> Clients who want to update their look, cover grays, or try a new color trend.</p>
+        <p><strong>What we do:</strong> Using professional dye, we provide full coloring, highlights, balayage, or
+          ombre. We also protect and nourish your hair during the process.</p>
+        <p><strong>Effect:</strong> Vibrant, long-lasting color with a shiny and healthy finish.</p>
+        <p><strong>Duration:</strong> 2–3 hours depending on technique.</p>
+      </div>
+    </div>
+
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Hair Treatment</h2>
+        <p><strong>For whom:</strong> Those with dry, damaged, or weakened hair.</p>
+        <p><strong>What we do:</strong> We apply professional masks, keratin, or nourishing ampoules to restore strength
+          and shine.</p>
+        <p><strong>Effect:</strong> Smooth, shiny, and healthier hair with long-lasting hydration.</p>
+        <p><strong>Duration:</strong> 1 hour.</p>
+      </div>
+    </div>
+
+    <!-- Massage -->
+    <div class="service-category">
+      <h2>Massage</h2>
+      <div class="procedures">
+        <div class="procedure">
+          <img src="images/massage1.jpg" alt="Classic Massage">
+          <div class="procedure-info">
+            <h3>Classic Full Body Massage (1h)</h3>
+            <p>Deep relaxation for your whole body.</p>
+            <span class="price">€50</span>
+            <button class="open-modal" data-modal="modal7">More details</button>
+          </div>
+        </div>
+        <div class="procedure">
+          <img src="images/massage2.jpg" alt="Head Massage">
+          <div class="procedure-info">
+            <h3>Head Massage (40min)</h3>
+            <p>Relieves stress and improves circulation.</p>
+            <span class="price">€25</span>
+            <button class="open-modal" data-modal="modal8">More details</button>
+          </div>
+        </div>
+        <div class="procedure">
+          <img src="images/massage3.jpg" alt="Foot Massage">
+          <div class="procedure-info">
+            <h3>Foot Massage (30min)</h3>
+            <p>Relaxing care for tired legs and feet.</p>
+            <span class="price">€20</span>
+            <button class="open-modal" data-modal="modal9">More details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal7" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Classic Full Body Massage</h2>
+        <p><strong>For whom:</strong> Ideal for those suffering from stress, muscle tension, or fatigue.</p>
+        <p><strong>What we do:</strong> We use classic massage techniques on the whole body to relax muscles, improve
+          circulation, and relieve stress.</p>
+        <p><strong>Effect:</strong> Deep relaxation, reduced stiffness, and overall sense of well-being.</p>
+        <p><strong>Duration:</strong> 1 hour.</p>
+      </div>
+    </div>
+
+    <div id="modal8" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Head Massage</h2>
+        <p><strong>For whom:</strong> Clients dealing with stress, headaches, or sleep problems.</p>
+        <p><strong>What we do:</strong> Gentle massage of the scalp, temples, and neck using pressure and circular
+          movements.</p>
+        <p><strong>Effect:</strong> Relieves headaches, improves blood flow, reduces stress, and promotes hair growth.
+        </p>
+        <p><strong>Duration:</strong> 30–40 minutes.</p>
+      </div>
+    </div>
+
+    <div id="modal9" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Foot Massage</h2>
+        <p><strong>For whom:</strong> Perfect for those who stand or walk a lot during the day.</p>
+        <p><strong>What we do:</strong> Focused massage of the feet and calves, including acupressure zones.</p>
+        <p><strong>Effect:</strong> Relieves fatigue, improves blood circulation, and relaxes the whole body through
+          reflex points.</p>
+        <p><strong>Duration:</strong> 30 minutes.</p>
+      </div>
+    </div>
+
+    <!-- Skin Care -->
+    <div class="service-category">
+      <h2>Skin Care</h2>
+      <div class="procedures">
+        <div class="procedure">
+          <img src="images/skin1.jpg" alt="Facial Cleansing">
+          <div class="procedure-info">
+            <h3>Facial Cleansing</h3>
+            <p>Gentle and effective skin purification.</p>
+            <span class="price">€40</span>
+            <button class="open-modal" data-modal="modal10">More details</button>
+          </div>
+        </div>
+        <div class="procedure">
+          <img src="images/skin2.jpg" alt="Anti-Aging Treatment">
+          <div class="procedure-info">
+            <h3>Anti-Aging Treatment</h3>
+            <p>Helps maintain youthful and radiant skin.</p>
+            <span class="price">€60</span>
+            <button class="open-modal" data-modal="modal11">More details</button>
+          </div>
+        </div>
+        <div class="procedure">
+          <img src="images/skin3.jpg" alt="Hydration Mask">
+          <div class="procedure-info">
+            <h3>Hydration Mask</h3>
+            <p>Deep hydration for glowing skin.</p>
+            <span class="price">€30</span>
+            <button class="open-modal" data-modal="modal12">More details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal10" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Facial Cleansing</h2>
+      <p><strong>For whom:</strong> Suitable for clients with oily or combination skin prone to impurities.</p>
+      <p><strong>What we do:</strong> We perform deep cleansing with exfoliation, steaming, extraction if necessary, and
+        soothing masks.</p>
+      <p><strong>Effect:</strong> Clean, fresh skin with reduced blackheads and a healthy glow.</p>
+      <p><strong>Duration:</strong> 1.5 hours.</p>
+    </div>
+  </div>
+
+  <div id="modal11" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Anti-Aging Treatment</h2>
+      <p><strong>For whom:</strong> Clients who want to reduce fine lines, wrinkles, and restore skin elasticity.</p>
+      <p><strong>What we do:</strong> Includes cleansing, exfoliation, serum application with active anti-aging
+        ingredients, massage, and lifting mask.</p>
+      <p><strong>Effect:</strong> Smoother, firmer skin with a youthful glow.</p>
+      <p><strong>Duration:</strong> 1.5–2 hours.</p>
+    </div>
+  </div>
+
+  <div id="modal12" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Hydration Mask</h2>
+      <p><strong>For whom:</strong> Especially suitable for dry, dehydrated, or sensitive skin.</p>
+      <p><strong>What we do:</strong> Apply a deeply moisturizing mask enriched with hyaluronic acid, vitamins, and
+        nourishing extracts.</p>
+      <p><strong>Effect:</strong> Restores hydration, reduces tightness, and gives skin a radiant, healthy look.</p>
+      <p><strong>Duration:</strong> 45–60 minutes.</p>
+    </div>
+  </div>
+
+  <script>
+    // Открыть модалку
+    document.querySelectorAll('.open-modal').forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'flex';
+      });
+    });
+
+    // Закрыть по крестику
+    document.querySelectorAll('.close').forEach(closeBtn => {
+      closeBtn.addEventListener('click', () => {
+        closeBtn.closest('.modal').style.display = 'none';
+      });
+    });
+
+    // Закрыть по клику вне окна
+    window.addEventListener('click', e => {
+      if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+      }
+    });
+  </script>
+
+  <footer>
+    <p>© 2025 Glow Studio. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
